@@ -1,7 +1,7 @@
 import os
 import customtkinter as ctk
 
-# --- Download song function ---
+# Download song function
 def download_song():
     spotify_url = entry.get()
     if spotify_url.strip() == "":
@@ -24,7 +24,7 @@ def download_song():
     # Reset the progress bar after 3 seconds
     root.after(3000, reset_progress_bar)
 
-# --- Reset Progress Bar ---
+# Reset Progress Bar
 def reset_progress_bar():
     progress_bar.set(0)
 
@@ -37,7 +37,7 @@ root.title("Freakquency - Spotify Downloader")
 root.geometry("400x400")
 root.resizable(False, False)
 
-# --- Frame ---
+# Frame
 frame = ctk.CTkFrame(root, width=380, height=380, corner_radius=20, fg_color="#242424")
 frame.pack(padx=5, pady=5, expand=True)  # Pack the frame with 20px gap on all sides
 
@@ -69,5 +69,5 @@ progress_bar = ctk.CTkProgressBar(frame, width=250, height=8, corner_radius=50)
 progress_bar.set(0)
 progress_bar.pack(pady=(0, 0))
 
-# --- Start the App ---
+# Start the App
 root.mainloop()
